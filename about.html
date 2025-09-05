@@ -5,6 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Me - My Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Only adding minimal CSS for the image placement */
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+    }
+    
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .profile-photo {
+      flex: 0 0 300px;
+      text-align: center;
+    }
+    
+    .profile-photo img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      border-radius: 10px;
+    }
+    
+    .profile-photo .caption {
+      margin-top: 10px;
+      font-style: italic;
+      color: #666;
+    }
+    
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column-reverse;
+      }
+      
+      .profile-photo {
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -16,11 +58,55 @@
     </ul>
   </nav>
 
-  <section>
+  <section class="about">
     <h1>About Me</h1>
-    <p>A brief introduction about myself, my background, skills, and passions.</p>
-    <!-- Students can add more personal details here -->
-  </section>
 
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Background & Education</h2>
+        <p>
+          I’m <strong>Marilyn Rogito</strong>, a Computer Science student with a strong interest in
+          building practical tech solutions for real-world problems. My academic journey has focused on software development,
+          systems design, and applying data-driven approaches to improve user experiences.
+        </p>
+        <p>
+          I’ve worked on projects ranging from Android apps and simple web tools to machine learning prototypes. I enjoy
+          collaborating in teams, documenting clear processes, and shipping features that are easy to maintain.
+        </p>
+
+        <h2>Skills & Technologies</h2>
+        <p>I’m comfortable across the stack and always learning. Here are some of the tools I use:</p>
+        <h3>Core Skills</h3>
+        <ul>
+          <li>Programming: Python, Java, C/C++, JavaScript (ES6+)</li>
+          <li>Web: HTML5, CSS3, basic Responsive Design</li>
+          <li>Databases & Data: SQL, basic data cleaning/analysis</li>
+          <li>Version Control & Dev: Git/GitHub, Linux/CLI, VS Code</li>
+        </ul>
+        <h3>Tools I’ve Tinkered With</h3>
+        <ul>
+          <li>Android Studio (Compose basics), Firebase Auth (basics)</li>
+          <li>Arduino/Tinkercad for quick IoT prototypes</li>
+          <li>Matplotlib/Pandas for quick exploratory analysis</li>
+        </ul>
+
+        <h2>Hobbies, Passions & Goals</h2>
+        <p>
+          Outside class, I enjoy exploring how technology can
+          support sustainability and youth empowerment. I’m passionate about turning ideas into simple, usable products.
+        </p>
+        <p>
+          My short-term goal is to strengthen my full-stack skills and contribute to impactful open-source projects.
+          Long-term, I aim to build tools that improve livelihoods and create meaningful digital experiences across Africa.
+        </p>
+      </div>
+      
+      <div class="profile-photo">
+        <!-- Replace with your actual image path -->
+        <img src="C:\Users\HP\Downloads\imgporfolio.jpg" alt="Marilyn Rogito - Computer Science Student and Developer" />
+        <p class="caption">Marilyn Rogito - Passionate about technology solutions</p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
